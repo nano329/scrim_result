@@ -79,6 +79,13 @@ def DateToStr(date):
     return
 
 
+def IntToRow(n):
+    if n <= 26:
+        return chr(n + 64)
+    else:
+        return chr(n // 26 + 64) + chr(n % 26 + 64)
+
+
 def record(n):
     sec = n // 1000
     msec = n % 1000
